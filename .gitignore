@@ -1,0 +1,16 @@
+# D build artifacts
+*.o
+*.obj
+*.lst
+*.lib
+*.a
+*.exe
+*.pdb
+*.dll
+dub.selections.json
+.dub/
+docs.json
+__pycache__/
+
+# GitHub specific
+.github/

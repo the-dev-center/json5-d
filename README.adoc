@@ -1,0 +1,48 @@
+= json5-d
+:description: Native JSON5 implementation for the D programming language.
+
+`json5-d` is a native, high-performance JSON5 parser and serializer for the D programming language, intended to be a drop-in replacement for `std.json` with added support for JSON5 features.
+
+== Features
+
+* **Comments**: Support for single-line (`//`) and multi-line (`/* ... */`) comments.
+* **Trailing Commas**: Support for trailing commas in objects and arrays.
+* **Unquoted Keys**: Support for ECMAScript 5.1 Identifier keys.
+* **Single-Quoted Strings**: Support for strings wrapped in single quotes.
+* **Multi-line Strings**: Support for strings spanning multiple lines via escaped newlines.
+* **Compatibility**: Fully compatible with `std.json.JSONValue`.
+
+== Usage
+
+[source,d]
+----
+import json5;
+
+void main() {
+    string content = q{
+        {
+            // This is a JSON5 file
+            foo: "bar",
+            baz: 42, // trailing comma!
+        }
+    };
+
+    auto doc = parseJSON5(content);
+    assert(doc["foo"].str == "bar");
+}
+----
+
+== Installation
+
+Add `json5-d` to your `dub.json`:
+
+[source,json]
+----
+"dependencies": {
+    "json5-d": "~>0.1.0"
+}
+----
+
+== Development
+
+This project is part of link:https://github.com/the-dev-center[The Dev Center] initiative.
