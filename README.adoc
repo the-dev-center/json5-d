@@ -45,4 +45,5 @@ Add `json5-d` to your `dub.json`:
 
 == Development
 
-This project is part of link:https://github.com/the-dev-center[The Dev Center] initiative.
+This project is part of link:https://github.com/devcntr-app[The Dev Center] initiative.
+
